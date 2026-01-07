@@ -8,3 +8,4 @@ function getComputerChoice(){
     else{
         return "Scissors";}
 }
+console.log(getComputerChoice())
