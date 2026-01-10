@@ -1,5 +1,5 @@
 function getComputerChoice(){
-    const randomNumber = Math.random()
+    const randomNumber = Math.random();
 
     if (randomNumber < 0.33){
         return "Rock";}
@@ -11,7 +11,7 @@ function getComputerChoice(){
 console.log(getComputerChoice())
 
 function getHumanChoice(){
-    const choice = prompt("Rock, Paper, or Scissors?")
+    const choice = prompt("Rock, Paper, or Scissors?");
 
     if(choice == "Rock"){
         return "Rock";
@@ -20,30 +20,32 @@ function getHumanChoice(){
         return "Paper";
     }
     else if(choice == "Scissors")
-        return "Scissors"
+        return "Scissors";
 }
 console.log(getHumanChoice())
 
-let humanScore = 0
-let computerScore = 0
+let humanScore = 0;
+let computerScore = 0;
 
 function playRound(humanChoice, computerChoice){
     humanChoice = humanChoice.trim().toLowerCase();
     computerChoice = computerChoice.trim().toLowerCase();
 
     if(computerChoice === humanChoice){
-        return "Tie!"
+        return "Tie!";
     }
     else if(
         (computerChoice === "rock" && humanChoice === "scissors") || 
         (computerChoice === "paper" && humanChoice === "rock") || 
         (computerChoice === "scissors" && humanChoice === "paper")){
-        return "Computer Wins, You Lose!"
+        computerScore++;
+        return "Computer Wins, You Lose!";
     }
     else if(
         (humanChoice === "rock" && computerChoice === "scissors") || 
         (humanChoice === "paper" && computerChoice === "rock") || 
         (humanChoice === "scissors" && computerChoice === "paper")){
-        return "Computer Loses, You Win!"
+        humanScore++;
+        return "Computer Loses, You Win!";
     }
 }
