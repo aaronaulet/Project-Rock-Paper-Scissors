@@ -12,15 +12,7 @@ console.log(getComputerChoice())
 
 function getHumanChoice(){
     const choice = prompt("Rock, Paper, or Scissors?");
-
-    if(choice == "Rock"){
-        return "Rock";
-    }
-    else if(choice == "Paper"){
-        return "Paper";
-    }
-    else if(choice == "Scissors")
-        return "Scissors";
+    return choice.trim().toLowerCase();
 }
 console.log(getHumanChoice())
 
