@@ -41,3 +41,8 @@ function playRound(humanChoice, computerChoice){
         return "Computer Loses, You Win!";
     }
 }
+const humanChoice = getHumanChoice();
+const computerChoice = getComputerChoice();
+
+console.log(playRound(humanChoice, computerChoice))
+console.log("Scores:", "You:", humanScore, "Computer:", computerScore);
