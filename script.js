@@ -30,4 +30,14 @@ let computerScore = 0
 function playRound(humanChoice, computerChoice){
     humanChoice = humanChoice.trim().toLowerCase();
     computerChoice = computerChoice.trim().toLowerCase();
+
+    if(computerChoice === humanChoice){
+        return "Tie!"
+    }
+    else if(){
+        return "Computer Wins, You Lose!"
+    }
+    else(){
+        return "Computer Loses, You Win!"
+    }
 }
