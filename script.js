@@ -29,5 +29,5 @@ let computerScore = 0
 
 function playRound(humanChoice, computerChoice){
     humanChoice = humanChoice.trim().toLowerCase();
-    humanChoice = humanChoice.trim().toLowerCase();
+    computerChoice = computerChoice.trim().toLowerCase();
 }
