@@ -34,7 +34,10 @@ function playRound(humanChoice, computerChoice){
     if(computerChoice === humanChoice){
         return "Tie!"
     }
-    else if(){
+    else if(
+        (computerChoice === "rock" && humanChoice === "scissors") || 
+        (computerChoice === "paper" && humanChoice === "rock") || 
+        (computerChoice === "scissors" && humanChoice === "paper")){
         return "Computer Wins, You Lose!"
     }
     else(){
