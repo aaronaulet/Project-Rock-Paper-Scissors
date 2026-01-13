@@ -13,14 +13,11 @@ function getHumanChoice(){
     const choice = prompt("Rock, Paper, or Scissors?");
     return choice.trim().toLowerCase();
 }
-
-const humanChoice = getHumanChoice();
-const computerChoice = getComputerChoice();
-
-console.log("Scores:", "You:", humanScore, "Computer:", computerScore);
-
 function playGame(){
-  function playRound(humanChoice, computerChoice){
+let humanScore = 0;
+let computerScore = 0;
+
+function playRound(humanChoice, computerChoice){
     humanChoice = humanChoice.trim().toLowerCase();
     computerChoice = computerChoice.trim().toLowerCase();
 
@@ -42,6 +39,9 @@ function playGame(){
         return "Computer Loses, You Win!";
     }
 }  
-let humanScore = 0;
-let computerScore = 0;
+const humanChoice = getHumanChoice();
+const computerChoice = getComputerChoice();
+
+console.log(playRound(humanChoice, computerChoice))
+console.log("Scores:", "You:", humanScore, "Computer:", computerScore);
 }
